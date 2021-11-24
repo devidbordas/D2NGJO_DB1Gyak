@@ -1,0 +1,4 @@
+SELECT nev FROM oktato Where tanszek LIKE 'erőszak';
+Select megnevezes FROM targy Where kredit=3;
+Select nev FROM hallgato Where eletkor>20;
+Select kod From targy where neptunkod=(Select nev from oktato where tanszek='erőszak');
