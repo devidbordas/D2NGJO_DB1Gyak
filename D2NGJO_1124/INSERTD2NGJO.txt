@@ -1,0 +1,1 @@
+INSERT INTO oktato VALUES ('d2ngjo','Sajt Elek', 'erõszak');
