@@ -1,0 +1,81 @@
+A táblák létrehozása:
+
+CREATE TABLE Costumer (
+	UserID INT NOT NULL,
+	UName VARCHAR(20),
+	PNumber BIGINT,
+	Email VARCHAR(40),
+	Birthday DATE,
+	ZipCode INT,
+	City VARCHAR(30),
+	Street VARCHAR(30),
+	HNumber INT,
+	PRIMARY KEY(UserID)
+);
+
+CREATE TABLE CreditCard(
+	CardNumber INT NOT NULL,
+	Bank VARCHAR(40),
+	EDate DATETIME,
+	Type VARCHAR(20),
+	UserID INT,
+	PRIMARY KEY(CardNumber),
+	FOREIGN KEY(UserID) REFERENCES Costumer(UserID)
+);
+
+CREATE TABLE Goods(
+	GoodsID INT NOT NULL,
+	GName VARCHAR(20),
+	Price INT,
+	StoreID INT,
+	PRIMARY KEY(GoodsID),
+	FOREIGN KEY(StoreID) REFERENCES Store(StoreID)
+);
+
+CREATE TABLE Expletive(
+	Expletive VARCHAR(20),
+	GoodsID INT,
+	PRIMARY KEY (Expletive),
+	FOREIGN KEY (GoodsID) REFERENCES Goods(GoddsID)
+);
+
+CREATE TABLE Store(
+	StoreID INT NOT NULL,
+	SName VARCHAR(20),
+	OHours VARCHAR(20),
+	PNumber BIGINT,
+	Email VARCHAR(40),
+	PRIMARY KEY(StoreID)
+);
+
+CREATE TABLE Transport(
+	TransportID INT NOT NULL,
+	ODate DATETIME,
+	DDate DATETIME,
+	DropshipperID INT,
+	StoreID INT,
+	FOREIGN KEY (DropshipperID) REFERENCES Dropshipper(DropshipperID),
+	FOREIGN KEY (StoreID) REFERENCES Store(StoreID),
+	PRIMARY KEY (TransportID)
+);
+
+CREATE TABLE Dropshipper(
+	DropshipperID INT NOT NULL,
+	DName VARCHAR(20),
+	PNumber BIGINT,
+	Email VARCHAR(40),
+	ZipCode INT,
+	City VARCHAR(20),
+	Street VARCHAR(30),
+	HNumber INT,
+	PRIMARY KEY(DropshipperID)
+);
+
+CREATE TABLE Dropshiper school(
+	DSID INT NOT NULL,
+	DSName VARCHAR(30),
+	Members INT,
+	Director VARCHAR(20),
+	FOREIGN KEY (DropshipperID) REFERENCES Dropshipper(DropshipperID),
+	PRIMARY KEY (DSID)
+);

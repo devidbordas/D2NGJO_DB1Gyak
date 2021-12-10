@@ -1,0 +1,33 @@
+Lekérdezések:
+
+1.	Store tábla áruház nevek gmailes emaillel rendelkezők lekérdezése
+SELECT SName FROM Store WHERE Email LIKE '%gmail.com';
+
+2.	Dropshipper tábla azon értékeinek kiíratása, aminek telefonszámuk 20-as
+SELECT DName, PNumber, Email, ZipCode, City, Street, HNumber FROM Dropshipper WHERE PNumber LIKE ’20%’;
+
+3.	Áruk nevei, amelyeknek van kiegészítőjük
+SELECT GName FROM Goods JOIN Expletive WHERE Expletive='VAN';
+
+4.	Áruk nevei, amit az 1. Dropshipper szállított ki.
+SELECT GName FROM Goods JOIN Transport WHERE Dropshipping=1;
+
+5.	Costumer tábla adatainak kiíratása
+SELECT * FROM Costumer;
+
+6.	Ennyi áruház van aminek a nevében szerepel o betű
+SELECT COUNT(StoreID) FROM Store WHERE NEV LIKE '%o%';
+7.	Azok az áruk amelyeknek az ára magasabb az átlag árnál
+SELECT GoodsID, GName FROM Goods WHERE Price>(SELECT AVG(Price) FROM Goods);
+
+8.	Hány tranzakciója volt a 2-es dropshippernek
+SELECT COUNT(TransportID) FROM Transport WHERE DropshipperID=2;
+
+9.	Legnagyobb árral rendelkező áru összes adata
+SELECT * FROM Goods WHERE Price=(SELECT MAX(Price) FROM Goods);
+
+10.	Kilistázza azoknak az áruházak neveit, amiknek a nyitása 6 és 16 között van + a telefonszámuk 70-es
+SELECT SName FROM Store WHERE OHours='6-16' AND PNumber LIKE '70%';
+
+11.	Kilistázza az áru neve alapján a minimum, maximum és átlag költséget
+SELECT MIN(Price), MAX(Price), AVG(Price) FROM Goods GROUP BY GName;

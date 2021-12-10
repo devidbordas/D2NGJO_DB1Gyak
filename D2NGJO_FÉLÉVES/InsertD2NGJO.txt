@@ -1,0 +1,76 @@
+A táblák feltöltése:
+
+INSERT INTO Costumer VALUES 
+(1, 'devid3529', '704233701', 'devidbordas@gmail.com', '2001-05-15', 3529, 'Miskolc', 'Lévay József utca', 29);
+
+INSERT INTO Costumer VALUES 
+(2, 'malacka123', '206735449', 'malacka123@freemail.hu', '2000-02-18', 4352, 'Kazincbarcika', 'Sárközutca', 85);
+
+INSERT INTO Costumer VALUES 
+(3, 'kenőmájaspéksütemény', '305566395', 'nagyhazamvan@citromail.hu', '2004-03-29', 6789, 'Budapest', 'Mocsárutca', 20);
+
+INSERT INTO Costumer VALUES 
+(4, 'fatöltelék18', '209999871', 'faaprito@gmail.com', '1999-08-01', 3580, 'Miskolc', 'Kiss Gábor utca', 17);
+
+INSERT INTO Costumer VALUES 
+(5, 'Tóth Miklós', '306879500', 'mikloskavok@gmail.hu', '1998-12-10', 3570, 'Miskolc', 'Hejő utca', 5);
+
+INSERT INTO CreditCard VALUES 
+(5448997256575511, 'Budapest Bank', '2021-10-20', 'MasterCard',3);
+
+INSERT INTO CreditCard VALUES 
+(4539549280424555, 'OTP', '2021-10-10', 'OTP',1);
+
+INSERT INTO CreditCard VALUES 
+(4916222587491056, 'Budapest Bank', '2021-12-15', 'Visa',2);
+
+INSERT INTO CreditCard VALUES 
+(6011863127478696, 'Budapest Bank', '2021-04-02', 'MasterCard',4);
+
+INSERT INTO CreditCard VALUES 
+(372389121396623, 'ERSTE', '2021-07-26', 'Junior Erste',5);
+
+INSERT INTO Goods VALUES (1, 'LED-szalag', 5000, 5);
+INSERT INTO Goods VALUES (2, 'Calvin Klein fehérnemű', 4000, 4);
+INSERT INTO Goods VALUES (3, 'asztal', 15000, 3);
+INSERT INTO Goods VALUES (4, '5 kg homok', 3000, 2);
+INSERT INTO Goods VALUES (5, 'fülhallgató', 13000, 1);
+
+INSERT INTO Expletive VALUES ('adapter',1);
+INSERT INTO Expletive VALUES ('zseb-parfüm',2);
+INSERT INTO Expletive VALUES ('6 db csavar',3);
+INSERT INTO Expletive VALUES ('1 év garancia',1);
+INSERT INTO Expletive VALUES ('VAN',1);
+INSERT INTO Expletive VALUES ('VAN',2);
+INSERT INTO Expletive VALUES ('VAN',3);
+INSERT INTO Expletive VALUES ('NINCS',4);
+INSERT INTO Expletive VALUES ('NINCS',5);
+INSERT INTO Expletive VALUES ('VAN',1);
+
+INSERT INTO Store VALUES (5, 'LighterHome', '6-16', 705698235, 'lighterbetter@gmail.com');
+INSERT INTO Store VALUES (4, 'BrandRoom', '10-20', 707772525, 'brandroom@gmail.com');
+INSERT INTO Store VALUES (3, 'Decormore', '6-18', 208956231, 'decormore@gmail.com');
+INSERT INTO Store VALUES (2, 'Buildember', '9-19', 302233564, 'buildember@gmail.com');
+INSERT INTO Store VALUES (1, 'Earpear', '14-18', 709988413, 'earpear@gmail.com');
+
+INSERT INTO Transport VALUES(1, '2020-12-01', '2021-01-01', 1, 1);
+INSERT INTO Transport VALUES(2, '2020-12-01', '2021-01-01' ,5, 3);
+INSERT INTO Transport VALUES(3, '2021-10-13', '2021-10-20' , 3, 2);
+INSERT INTO Transport VALUES(4, '2021-11-24', '2021-12-04' ,4, 5);
+INSERT INTO Transport VALUES(5, '2021-09-25', '2021-10-02' ,2, 4);
+INSERT INTO Transport VALUES(6, '2021-12-12', '2021-12-21' ,4, 8);
+
+INSERT INTO Dropshipper VALUES
+(1, 'Fest', 704444678, 'fest98@gmail.com', 8999, 'London', 'Woogi street', 567);
+
+INSERT INTO Dropshipper VALUES
+(2, 'Smood', 209876543, 'smood_new@gmail.com', 4677, 'Budapest', 'Petőfi utca', 63);
+
+INSERT INTO Dropshipper VALUES
+(3, 'Vegeta', 209786754, 'vegeta100@gmail.com', 6555, 'Budapest', 'Miklós István', 5);
+
+INSERT INTO Dropshipper VALUES
+(4, 'Domina', 200011228, 'domina20@gmail.com', 4322, 'Miskolc', 'Eszterházy utca', 49);
+
+INSERT INTO Dropshipper VALUES
+(5, 'Bobber', 301425033, 'bobber30@gmail.com', 1669, 'Párizs', 'Boomer street', 33);
